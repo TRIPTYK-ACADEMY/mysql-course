@@ -168,9 +168,9 @@ DELETE FROM `users`;
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `age`, `role`, `email`, `password`, `inscription_date`) VALUES
   (1, 'Léon', 'Douillet', 18, 'USER', 'plume@gmail.com', '6reg4r6e4gr64gre6g9r7g9er8g4r9e8erg4reg4er9', '2020-07-15 14:19:47'),
   (2, 'Loreal', 'Paris', 18, 'USER', NULL, 'ergjrjgroigjrgregvrovervnliovnerlvner', '2020-07-17 12:15:47'),
-  (3, 'Amaury', 'Deflorenne', 22, 'USER', 'amaury@gmail.com', 'fzejozeijfzeojfoezjfozeijfzeojfzeofj', '2019-09-26 08:00:00'),
-  (4, 'Aurore', 'Deflorenne', 20, 'USER', 'aurore@gmail.com', 'fzejozeijfzeojfoezjfozeijfzeojfzeofj', '2019-09-26 08:00:00'),
-  (5, 'Sebastien', 'Cardon', 18, 'USER', 'escardon@potato.com', 'gerggrgregergregergregergergerger', '2020-07-11 00:00:00'),
+  (3, 'Amaury', 'Deflorenne', 22, 'ADMIN', 'amaury@gmail.com', 'fzejozeijfzeojfoezjfozeijfzeojfzeofj', '2019-09-26 08:00:00'),
+  (4, 'Aurore', 'Deflorenne', 20, 'ADMIN', 'aurore@gmail.com', 'fzejozeijfzeojfoezjfozeijfzeojfzeofj', '2019-09-26 08:00:00'),
+  (5, 'Sebastien', 'Cardon', 18, 'ADMIN', 'escardon@potato.com', 'gerggrgregergregergregergergerger', '2020-07-11 00:00:00'),
   (6, 'Gilles', 'Bertrand', 18, 'USER', 'gillesbertrant@triptyk.com', 'feojfojforiejoiergjreojgreojgoe', '2020-05-08 08:19:47'),
   (7, 'Guillaume', 'Danzin', 18, 'USER', 'danzinguilaumelegrand@triptyk.eu', 'gregrgregrvdfvvvregtrhthhtr', '2020-02-15 00:00:00'),
   (8, 'Morty', 'Smith', 18, 'USER', 'mortysmith@gmail.com', 'dfsxlsfdlkdppsdkfpsdfk', '2020-07-15 14:19:47'),
