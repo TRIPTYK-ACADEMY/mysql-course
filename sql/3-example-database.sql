@@ -5,7 +5,7 @@ CREATE TABLE `users` (
   `first_name` VARCHAR(32) NOT NULL,
   `last_name` VARCHAR(32) NOT NULL,
   `age` TINYINT NULL DEFAULT NULL,
-  `role` ENUM("USER","ADMIN") NOT NULL DEFAULT "USER",
+  `group` ENUM("USER","ADMIN") NOT NULL DEFAULT "USER",
   `email` varchar(255) NULL,
   `password` VARCHAR(1024) NOT NULL,
   `inscription_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -165,7 +165,7 @@ INSERT INTO `quotations` (`id`, `note`, `creation_date`, `user_id`, `article_id`
 -- Listage des données de la table examples.users : ~12 rows (environ)
 DELETE FROM `users`;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `age`, `role`, `email`, `password`, `inscription_date`) VALUES
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `age`, `group`, `email`, `password`, `inscription_date`) VALUES
   (1, 'Léon', 'Douillet', 18, 'USER', 'plume@gmail.com', '6reg4r6e4gr64gre6g9r7g9er8g4r9e8erg4reg4er9', '2020-07-15 14:19:47'),
   (2, 'Loreal', 'Paris', 18, 'USER', NULL, 'ergjrjgroigjrgregvrovervnliovnerlvner', '2020-07-17 12:15:47'),
   (3, 'Amaury', 'Deflorenne', 22, 'ADMIN', 'amaury@gmail.com', 'fzejozeijfzeojfoezjfozeijfzeojfzeofj', '2019-09-26 08:00:00'),
