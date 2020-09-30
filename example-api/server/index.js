@@ -4,7 +4,9 @@ const mysql = require('mysql2');
 const cors = require('cors')
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin : true
+}));
 
 const connection = mysql.createConnection({
   host     : 'localhost',
@@ -26,7 +28,11 @@ app.get('/articles-with-comments', function (req, res) {
     const result = {};
 
     if (req.query.type === 'inner') {
-        connection.query("SELECT articles.id AS articleId,articles.content AS articleContent,articles.title AS articleTitle,comments.id AS commentId,comments.content AS commentContent FROM articles INNER JOIN comments ON articles.id=comments.article_id",(err,sqlRes,fields) => {
+        connection.query(
+            `SELECT articles.id AS articleId,articles.content AS articleContent,articles.title AS articleTitle,comments.id AS commentId,comments.content AS commentContent 
+            FROM articles 
+            INNER JOIN comments ON articles.id=comments.article_id`,
+            (err,sqlRes,fields) => {
             for (const row of sqlRes) {
                 if (!result[row.articleId]) {
                     result[row.articleId] = {

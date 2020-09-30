@@ -5,7 +5,7 @@ function createArticleDiv(article) {
     const textDiv = document.createElement("p");
     const commentsDiv = document.createElement("div");
     const commentsTitle = document.createElement("h3");
-    commentsTitle.innerText = "Commentaires";
+    commentsTitle.innerText = `Commentaires (${article.comments.length})`;
 
     title.innerText = article.articleTitle;
     textDiv.innerText = article.articleContent;
@@ -42,6 +42,8 @@ async function getArticleWithComments(type) {
     articleHeading.innerText = `Mes articles (${json.length})`;
     
     mainDiv.innerHTML = '';
+
+    console.log(json);
 
     for (const article of json) {
         mainDiv.appendChild(createArticleDiv(article));

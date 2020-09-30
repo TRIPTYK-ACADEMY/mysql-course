@@ -1,0 +1,7 @@
+main > div {
+    margin-top: 10px;
+}
+
+main > div > p {
+    padding: 10px;
+}
