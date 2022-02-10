@@ -1,0 +1,22 @@
+services:
+  server:
+    image: jrei/systemd-ubuntu
+    privileged: true
+    command: ["sleep","infinity"]
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: test123*
+    networks:
+      - exercice
+    ports:
+      - "3306:3306"
+  client:
+    image: ubuntu
+    restart: on-failure
+    command: ["sleep","infinity"]
+    networks:
+      - exercice
+
+networks:
+  exercice:
